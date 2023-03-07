@@ -1,0 +1,106 @@
+GET http://127.0.0.1:5000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/movies/?director_id=12
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/movies/?genre_id=4
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/movies/?year=2010
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/directors/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:5000/user/3
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/genres/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/genres/1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:10001/movies/21
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:5000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 3,
+  "email": "boldirevmax10@gmail.com",
+  "password": "admin",
+  "name": "Max",
+  "surname": "Margiev",
+  "favorite_genre": "Триллер"
+}
+
+###
+
+POST http://127.0.0.1:5000/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "boldirevmax10@gmail.com",
+  "password": "admin"
+}
+
+###
+
+PUT http://127.0.0.1:10001/movies/21
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+PATCH http://127.0.0.1:10001/movies/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+DELETE http://127.0.0.1:10001/user/21
